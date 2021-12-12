@@ -1,0 +1,11 @@
+---
+applications:
+  - name: log-rate
+    memory: 128M
+    instances: 1
+    health-check-type: process
+    buildpack: go_buildpack
+    command: log-rate
+    env:
+      LOG_LINES: 1
+      LOG_SIZE: 1024
